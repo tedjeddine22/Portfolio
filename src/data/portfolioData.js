@@ -6,6 +6,7 @@ export const portfolioData = {
     specialty: "Cybersécurité",
     university: "USTHB",
     photo: "/img/tadjo.jpg", // Ajout de la photo
+    aboutPhoto: "/img/tadjo imag about.jpg", // Photo pour la section À propos
     stats: {
       years: 4,      
       projects: 7,   

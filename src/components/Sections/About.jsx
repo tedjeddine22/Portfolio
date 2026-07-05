@@ -49,7 +49,7 @@ export default function About() {
           {/* L'image de profil avec l'animation qui vient de la gauche */}
           <div className="about-image reveal-left">
             <div className="about-image-wrapper">
-              <img src={data.photo} alt={data.name} />
+              <img src={data.aboutPhoto || data.photo} alt={data.name} />
             </div>
           </div>
           
