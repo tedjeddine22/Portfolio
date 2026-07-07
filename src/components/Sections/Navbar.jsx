@@ -17,7 +17,7 @@ export default function Navbar() {
 
     // Ajout de l'écouteur d'événement au montage du composant
     window.addEventListener('scroll', handleScroll);
-    
+
     // Nettoyage de l'écouteur au démontage
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -30,12 +30,12 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
       <div className="container">
-        
+
         {/* Le Logo avec votre effet de Glitch CSS */}
         <a href="#" className="nav-logo" onClick={closeMenu}>
           root@tadjeddine
         </a>
-        
+
         {/* Les liens de navigation */}
         <ul className={`nav-links ${menuActive ? 'active' : ''}`} id="navLinks">
           <li><a href="#about" onClick={closeMenu}>À propos</a></li>
@@ -47,8 +47,8 @@ export default function Navbar() {
         </ul>
 
         {/* Le bouton Hamburger pour la version Mobile */}
-        <div 
-          className={`nav-toggle ${menuActive ? 'active' : ''}`} 
+        <div
+          className={`nav-toggle ${menuActive ? 'active' : ''}`}
           id="navToggle"
           onClick={() => setMenuActive(!menuActive)}
           aria-label="Ouvrir le menu de navigation"
@@ -57,7 +57,7 @@ export default function Navbar() {
           <span></span>
           <span></span>
         </div>
-        
+
       </div>
     </nav>
   );

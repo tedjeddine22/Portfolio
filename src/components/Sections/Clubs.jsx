@@ -67,7 +67,7 @@ export default function Clubs() {
               <div style={{
                 marginTop: '10px', 
                 padding: '4px 10px', 
-                background: 'rgba(255, 0, 51, 0.1)', 
+                background: 'rgba(0, 255, 51, 0.1)', 
                 border: '1px solid var(--accent-main)', 
                 borderRadius: '4px', 
                 display: 'inline-block',

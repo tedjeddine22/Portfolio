@@ -1,6 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { portfolioData } from '../../data/portfolioData';
 
+// Circuit Board SVG - animated lines that mimic the Shellmates design
+function CircuitBoard() {
+  return (
+    <div className="circuit-bg">
+      <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        {/* Main circuit paths */}
+        <path className="circuit-line" d="M 100 50 L 200 50 L 200 150 L 350 150 L 350 100 L 450 100" />
+        <path className="circuit-line" d="M 50 200 L 150 200 L 150 300 L 300 300 L 300 250 L 500 250" />
+        <path className="circuit-line" d="M 200 400 L 300 400 L 300 350 L 450 350 L 450 450 L 550 450" />
+        <path className="circuit-line" d="M 80 500 L 180 500 L 180 420 L 250 420 L 250 520 L 400 520" />
+        <path className="circuit-line" d="M 350 50 L 350 120 L 500 120 L 500 200 L 580 200" />
+        <path className="circuit-line" d="M 150 80 L 150 180 L 280 180 L 280 280 L 420 280 L 420 180" />
+        
+        {/* Circuit nodes (dots at intersections) */}
+        <circle className="circuit-dot" cx="200" cy="50" r="4" />
+        <circle className="circuit-dot" cx="350" cy="150" r="4" />
+        <circle className="circuit-dot" cx="300" cy="300" r="4" />
+        <circle className="circuit-dot" cx="450" cy="350" r="4" />
+        <circle className="circuit-dot" cx="180" cy="500" r="4" />
+        <circle className="circuit-dot" cx="500" cy="120" r="4" />
+
+        {/* Additional decorative dots */}
+        <circle className="circuit-dot" cx="150" cy="200" r="3" style={{ animationDelay: '3s' }} />
+        <circle className="circuit-dot" cx="250" cy="420" r="3" style={{ animationDelay: '3.2s' }} />
+        <circle className="circuit-dot" cx="420" cy="280" r="3" style={{ animationDelay: '3.4s' }} />
+        <circle className="circuit-dot" cx="500" cy="250" r="3" style={{ animationDelay: '3.6s' }} />
+      </svg>
+    </div>
+  );
+}
+
 export default function Hero() {
   // On récupère directement l'objet "about" complet depuis portfolioData
   const { about: data } = portfolioData;
@@ -55,6 +86,7 @@ export default function Hero() {
 
   return (
     <section className="hero" id="hero">
+      <CircuitBoard />
       <div className="container">
         <div className="hero-grid">
           <div className="hero-text">
@@ -65,12 +97,13 @@ export default function Hero() {
             
             {/* Titre principal avec le nom injecté */}
             <h1 className="hero-title">
-              Salam, je suis <span className="name">tadj eddine bouderba</span>
+              Salam, je suis <span className="name">tadj eddine BOUDERBA</span>
             </h1>
             
             {/* Sous-titre avec l'effet de frappe */}
             <p className="hero-subtitle">
               <span className="typing-text">{text}</span>
+              <span className="typing-cursor">█</span>
             </p>
             
             {/* Description récupérée depuis les données */}
@@ -101,4 +134,3 @@ export default function Hero() {
     </section>
   );
 }
-
